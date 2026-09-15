@@ -1,0 +1,33 @@
+services:
+  portfolio:
+    container_name: portfolio
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    labels:
+      - traefik.enable=true
+
+      # HTTP + HTTPS
+      - traefik.http.routers.portfolio.entrypoints=http,https
+
+      # Domaine du portfolio
+      - traefik.http.routers.portfolio.rule=Host(`portfollio.amaury-jacob.fr`)
+
+      # Nginx écoute sur le port 80 DANS le conteneur
+      - traefik.http.services.portfolio.loadbalancer.server.port=80
+
+      # HTTPS
+      - traefik.http.routers.portfolio.tls=true
+      - traefik.http.routers.portfolio.tls.certresolver=default
+
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    name: shared_network
+    external: true
