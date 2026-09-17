@@ -1,55 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    font-family: "Inter", sans-serif;
-    color: #212835;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    scroll-padding: 110px;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 10px;
-  height: 6px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.121);
-  border-radius: 8px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 8px;
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: #18181b;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.skeleton{
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.skeleton::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  padding-block: 20px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #eee, #dedede, #eee);
-  background-size: 200%;
-  animation: skeleton .7s infinite linear reverse;
+* {
+  box-sizing: border-box;
 }
 
-@keyframes skeleton {
-  0%{
-    background-position: -100% 0;
-  }
-  100%{
-    background-position: 100% 0;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: #18181b;
+  color: #ffffff;
 }
