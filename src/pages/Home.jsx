@@ -128,7 +128,7 @@ export default function Home() {
                 <Link
                   to={`/projects/${project.slug}`}
                   key={project.slug}
-                  className="group flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-xl"
+                  className="group flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-950/5 hover:shadow-xl"
                 >
                   <p className="text-sm font-semibold text-zinc-500">{project.date}</p>
                   <h3 className="mt-2 text-2xl font-bold tracking-tight text-zinc-950">
