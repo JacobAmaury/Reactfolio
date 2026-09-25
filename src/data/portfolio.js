@@ -1,3 +1,7 @@
+import { projects } from "./projects";
+
+export { projects };
+
 export const profile = {
   name: "Amaury Jacob-Piacentini",
   shortName: "Amaury Jacob",
@@ -73,93 +77,3 @@ export const skillGroups = [
   },
 ];
 
-export const projects = [
-  {
-    slug: "stage-lip6",
-    name: "Stage LIP6 — Analyse de textures en VHDL",
-    shortDescription:
-      "Implémentation en VHDL d’algorithmes d’analyse de textures initialement développés en C.",
-    date: "Juin – août 2024",
-    tags: ["C", "VHDL", "Traitement d’image", "FPGA"],
-    githubRepositoryURL: "",
-    externalURL: "",
-    context:
-      "Stage de développement réalisé au LIP6 dans le cadre d’un projet de recherche lié à l’analyse d’images.",
-    objective:
-      "Transposer vers une implémentation matérielle des algorithmes d’analyse de textures utilisant des matrices de co-occurrence.",
-    work: [
-      "Étude de l’algorithme de référence développé en C.",
-      "Implémentation des traitements en VHDL.",
-      "Adaptation des calculs aux contraintes d’une architecture matérielle.",
-      "Validation du comportement de l’implémentation.",
-    ],
-    results:
-      "Cette expérience m’a permis de travailler à l’interface entre traitement d’image, développement bas niveau et architecture matérielle.",
-  },
-  {
-    slug: "serveur-personnel",
-    name: "Serveur personnel auto-hébergé",
-    shortDescription:
-      "Mise en place et administration d’un serveur Linux pour héberger des services et des sites web personnels.",
-    date: "2024 – aujourd’hui",
-    tags: ["Debian", "Docker", "Traefik", "Nginx", "SSH"],
-    githubRepositoryURL: "",
-    externalURL: "",
-    context:
-      "Projet personnel visant à disposer d’une infrastructure auto-hébergée pour différents services et expérimentations.",
-    objective:
-      "Mettre en place une infrastructure simple, maintenable et sécurisée pour héberger plusieurs applications derrière un reverse proxy.",
-    work: [
-      "Administration d’un serveur Linux.",
-      "Déploiement d’applications avec Docker et Docker Compose.",
-      "Mise en place de Traefik comme reverse proxy.",
-      "Configuration du HTTPS et des noms de domaine.",
-      "Administration à distance via SSH.",
-    ],
-    results:
-      "Le serveur héberge notamment des sites web et différents services personnels. Ce portfolio est lui-même déployé sur cette infrastructure.",
-  },
-  {
-    slug: "instruments-midi",
-    name: "Instruments MIDI avec Arduino",
-    shortDescription:
-      "Conception de contrôleurs MIDI physiques permettant de piloter des logiciels de production musicale.",
-    date: "2024",
-    tags: ["Arduino", "C/C++", "MIDI", "Électronique"],
-    githubRepositoryURL: "",
-    externalURL: "",
-    context:
-      "Projet personnel mêlant musique, électronique et programmation embarquée.",
-    objective:
-      "Créer des interfaces physiques personnalisées capables de contrôler des logiciels de production musicale comme Ableton Live.",
-    work: [
-      "Conception de l’interface matérielle.",
-      "Programmation du microcontrôleur.",
-      "Gestion des entrées physiques et génération de messages MIDI.",
-      "Tests avec un logiciel de production musicale.",
-    ],
-    results:
-      "Le projet a permis de réaliser des contrôleurs adaptés à mes besoins et d’approfondir ma pratique des microcontrôleurs et de l’électronique.",
-  },
-  {
-    slug: "ia-echecs",
-    name: "IA pour jouer aux échecs",
-    shortDescription:
-      "Développement en Python d’une première IA appliquée au jeu d’échecs.",
-    date: "2023",
-    tags: ["Python", "TensorFlow", "IA"],
-    githubRepositoryURL: "",
-    externalURL: "",
-    context:
-      "Projet personnel réalisé pour expérimenter l’apprentissage automatique sur un problème de décision.",
-    objective:
-      "Construire une première application d’intelligence artificielle capable d’interagir avec un environnement de jeu d’échecs.",
-    work: [
-      "Développement du projet en Python.",
-      "Utilisation de TensorFlow.",
-      "Expérimentation autour de la représentation d’un état de jeu et de la prise de décision.",
-    ],
-    results:
-      "Ce projet a constitué une première mise en pratique de l’intelligence artificielle avant mon orientation vers les systèmes intelligents.",
-  },
-];

@@ -125,7 +125,8 @@ export default function Home() {
 
             <div className="grid gap-5 md:grid-cols-2">
               {projects.map((project) => (
-                <article
+                <Link
+                  to={`/projects/${project.slug}`}
                   key={project.slug}
                   className="group flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-xl"
                 >
@@ -142,14 +143,11 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <Link
-                    to={`/projects/${project.slug}`}
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-zinc-950"
-                  >
+                  <span className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-zinc-950">
                     Voir le projet
                     <FiArrowUpRight className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
-                </article>
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

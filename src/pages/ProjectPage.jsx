@@ -77,7 +77,39 @@ export default function ProjectPage() {
           )}
         </header>
 
+        <section className="space-y-6 border-b border-zinc-200 py-12">
+          <h2 className="text-2xl font-bold text-zinc-950">Aperçu du projet</h2>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {project.images.map((image, index) => (
+              <img
+                key={`${project.slug}-image-${index}`}
+                src={image}
+                alt={`${project.name} - aperçu ${index + 1}`}
+                className="h-full min-h-56 w-full rounded-2xl border border-zinc-200 object-cover"
+              />
+            ))}
+          </div>
+
+          {project.youtubeURL && (
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950">
+              <iframe
+                src={project.youtubeURL}
+                title={`Vidéo YouTube du projet ${project.name}`}
+                className="aspect-video w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          )}
+        </section>
+
         <div className="space-y-12 py-12">
+          <section>
+            <h2 className="text-2xl font-bold text-zinc-950">Description</h2>
+            <p className="mt-4 leading-8 text-zinc-600">{project.description}</p>
+          </section>
+
           <section>
             <h2 className="text-2xl font-bold text-zinc-950">Contexte</h2>
             <p className="mt-4 leading-8 text-zinc-600">{project.context}</p>
