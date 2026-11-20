@@ -1,13 +1,18 @@
-import { projects } from "./projects";
-
-export { projects };
+import { projects as originalProjects } from "./projects";
+import { featuredProjects } from "./projects-featured";
+export const projects = [
+  ...featuredProjects,
+  ...originalProjects.filter((project) =>
+    !featuredProjects.some((featured) => featured.slug === project.slug)
+  ),
+];
 
 export const profile = {
   name: "Amaury Jacob-Piacentini",
   shortName: "Amaury Jacob",
-  tagline: "Étudiant en systèmes intelligents — IA, robotique et traitement du signal",
+  tagline: "Intelligent Systems student — AI, robotics, and signal processing",
   intro:
-    "Je développe des projets à l’interface entre logiciel, intelligence artificielle, électronique et systèmes embarqués. Je m’intéresse particulièrement à la robotique, au traitement d’images et de données ainsi qu’au développement Python et C/C++.",
+    "I build projects at the intersection of software, artificial intelligence, electronics, and embedded systems. I'm particularly interested in robotics, image and data processing, and Python and C/C++ development.",
   email: "Amaury_Francois.Jacob@etu.sorbonne-universite.fr",
   github: "https://github.com/JacobAmaury",
 };
@@ -15,64 +20,64 @@ export const profile = {
 export const education = [
   {
     period: "2026 – 2027",
-    title: "M2 Systèmes Intelligents",
+    title: "MSc in Intelligent Systems (second year)",
     place: "Sorbonne Université",
     description:
-      "Approfondissement en intelligence artificielle, robotique, interaction humain-machine, traitement d’images et de signaux.",
+      "Advanced studies in artificial intelligence, robotics, human-computer interaction, image processing, and signal processing.",
   },
   {
     period: "2025 – 2026",
-    title: "M1 Systèmes Intelligents",
+    title: "MSc in Intelligent Systems (first year)",
     place: "Sorbonne Université",
     description:
-      "Formation en conception et développement de systèmes intelligents : IA, apprentissage profond, traitement d’images, de sons et du langage, robotique et interaction humain-machine.",
+      "Study of intelligent systems design and development, including AI, deep learning, image, audio, and language processing, robotics, and human-computer interaction.",
   },
   {
     period: "2023 – 2025",
-    title: "Licence EEA",
+    title: "Bachelor's degree in Electrical Engineering, Energy, and Automation",
     place: "Sorbonne Université",
     description:
-      "Licence Électronique, Énergie Électrique et Automatique.",
+      "Undergraduate studies in electronics, electrical energy, and automation.",
   },
   {
     period: "2022 – 2023",
-    title: "L2 Physique",
+    title: "Second-year undergraduate studies in Physics",
     place: "Sorbonne Université",
     description:
-      "Formation en physique fondamentale et appliquée, combinant théorie et pratique.",
+      "Studies in fundamental and applied physics, combining theory and practice.",
   },
   {
     period: "2020 – 2022",
-    title: "Classe préparatoire TPC",
+    title: "TPC preparatory program",
     place: "Lycée d’Arsonval — Saint-Maur-des-Fossés",
     description:
-      "Formation intensive en physique, chimie et mathématiques.",
+      "Intensive studies in physics, chemistry, and mathematics.",
   },
 ];
 
 export const skillGroups = [
   {
-    title: "Développement",
+    title: "Software Development",
     description:
-      "Développement principalement en Python et C/C++, avec une attention portée à la structure du code, à l’intégration avec des systèmes existants et aux outils de développement sous Linux.",
+      "Primarily develop in Python and C/C++, with a focus on code structure, integration with existing systems, and Linux development tools.",
     skills: ["Python", "C", "C++", "JavaScript", "React", "Git"],
   },
   {
-    title: "Intelligence artificielle & données",
+    title: "Artificial Intelligence & Data",
     description:
-      "Traitement statistique des données, apprentissage automatique et profond, avec une application particulière au traitement d’images et à l’analyse de signaux.",
-    skills: ["Deep Learning", "CNN", "TensorFlow", "NumPy", "Pandas", "Traitement d’image"],
+      "Statistical data processing, machine learning, and deep learning, with a particular focus on image processing and signal analysis.",
+    skills: ["Deep Learning", "CNNs", "TensorFlow", "NumPy", "Pandas", "Image Processing"],
   },
   {
-    title: "Robotique & systèmes embarqués",
+    title: "Robotics & Embedded Systems",
     description:
-      "Développement de systèmes mêlant logiciel et matériel : microcontrôleurs, robotique, électronique et traitement de signaux.",
-    skills: ["ROS", "Microcontrôleurs", "Arduino", "VHDL", "Électronique", "Systèmes embarqués"],
+      "Develop systems that combine software and hardware, including microcontrollers, robotics, electronics, and signal processing.",
+    skills: ["ROS", "Microcontrollers", "Arduino", "VHDL", "Electronics", "Embedded Systems"],
   },
   {
-    title: "Systèmes & outils",
+    title: "Systems & Tools",
     description:
-      "Utilisation quotidienne de Linux, Git et Docker pour le développement, les tests et l’auto-hébergement de services.",
+      "Daily use of Linux, Git, and Docker for development, testing, and self-hosting services.",
     skills: ["Linux", "Docker", "Traefik", "Nginx", "SSH", "Fusion 360"],
   },
 ];

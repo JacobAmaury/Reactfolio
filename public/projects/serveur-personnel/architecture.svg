@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 660" role="img" aria-labelledby="t d">
+<title id="t">Personal server infrastructure diagram</title><desc id="d">Public HTTPS access via domain and Traefik to web applications, and private administration through WireGuard VPN to SSH on Debian. Home Assistant and Minecraft shown as other hosted services.</desc>
+<rect width="1040" height="660" rx="32" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<text x="520" y="54" font-size="27" font-weight="bold" fill="#0f172a">Personal self-hosted infrastructure</text>
+<rect x="48" y="89" width="286" height="92" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="191" y="123" font-size="21" font-weight="bold" fill="#0f172a">Internet</text><text x="191" y="151" font-size="17" fill="#475569">Domain + HTTPS</text>
+<rect x="706" y="89" width="286" height="92" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="849" y="123" font-size="21" font-weight="bold" fill="#0f172a">Remote administration</text><text x="849" y="151" font-size="17" fill="#475569">WireGuard VPN + SSH</text>
+<rect x="47" y="244" width="945" height="365" rx="24" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+<text x="520" y="287" font-size="24" font-weight="bold" fill="#1e3a8a">Debian Server · Docker host</text>
+<rect x="91" y="321" width="406" height="104" rx="17" fill="#0f172a"/>
+<text x="294" y="356" font-size="23" font-weight="bold" fill="#ffffff">Traefik reverse proxy</text><text x="294" y="387" font-size="17" fill="#cbd5e1">Routes HTTP(S) traffic to web apps</text>
+<rect x="545" y="321" width="407" height="104" rx="17" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+<text x="748" y="355" font-size="23" font-weight="bold" fill="#0f172a">Secure remote access</text><text x="748" y="387" font-size="17" fill="#475569">Linux shell · SSH · Zsh</text>
+<rect x="92" y="473" width="263" height="98" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="224" y="510" font-size="21" font-weight="bold" fill="#0f172a">Portfolio</text><text x="224" y="540" font-size="16" fill="#64748b">Personal websites</text>
+<rect x="375" y="473" width="283" height="98" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="516" y="508" font-size="19" font-weight="bold" fill="#0f172a">Collaboration tools</text><text x="516" y="536" font-size="15" fill="#64748b">Mattermost · Jitsi</text><text x="516" y="555" font-size="15" fill="#64748b">HedgeDoc · Vikunja</text>
+<rect x="679" y="473" width="274" height="98" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="816" y="510" font-size="20" font-weight="bold" fill="#0f172a">Other services</text><text x="816" y="538" font-size="16" fill="#64748b">Home Assistant · Minecraft</text>
+</g><g fill="none" stroke="#64748b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M191 182 V227 H294 V319"/><path d="m285 309 9 10 9-10"/>
+<path d="M849 182 V226 H748 V318"/><path d="m739 309 9 10 9-10"/>
+<path d="M294 425 V454 H224 V472"/><path d="m216 463 8 9 8-9"/>
+<path d="M294 454 H516 V472"/><path d="m508 463 8 9 8-9"/>
+</g>
+<text x="520" y="638" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#64748b">Conceptual diagram — not all non-HTTP services pass through Traefik</text>
+</svg>

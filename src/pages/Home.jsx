@@ -23,11 +23,11 @@ export default function Home() {
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_320px]">
             <div>
               <p className="mb-4 text-sm font-semibold text-zinc-500">
-                Portfolio • Étudiant M2 Systèmes Intelligents
+                Portfolio • MSc student in Intelligent Systems
               </p>
 
               <h1 className="max-w-4xl text-4xl font-black tracking-tight text-zinc-950 sm:text-6xl">
-                Bonjour, je suis {profile.shortName}.
+                Hello, my name is {profile.shortName}.
               </h1>
 
               <p className="mt-5 max-w-3xl text-xl font-medium leading-8 text-zinc-700">
@@ -53,13 +53,17 @@ export default function Home() {
                   className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:border-zinc-950"
                 >
                   <FiMail />
-                  Me contacter
+                  Contact me
                 </a>
               </div>
             </div>
 
-            <div className="mx-auto flex h-64 w-64 items-center justify-center rounded-full border border-zinc-200 bg-zinc-50 text-6xl font-black text-zinc-300 shadow-sm lg:h-72 lg:w-72">
-              AJ
+            <div className="mx-auto h-64 w-64 overflow-hidden rounded-full border border-zinc-200 bg-zinc-50 shadow-sm lg:h-72 lg:w-72">
+              <img
+                src="/photo_cv_bis.jpg"
+                alt={`Profile photo of ${profile.shortName}`}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </section>
@@ -67,9 +71,9 @@ export default function Home() {
         <section id="formation" className="border-y border-zinc-200 bg-zinc-50">
           <div className="mx-auto max-w-6xl px-5 py-20">
             <SectionTitle
-              eyebrow="Parcours"
-              title="Formation"
-              description="Un parcours mêlant physique, électronique, informatique et intelligence artificielle."
+              eyebrow="Background"
+              title="Education"
+              description="A background spanning physics, electronics, computer science, and artificial intelligence."
             />
 
             <div className="grid gap-4">
@@ -92,9 +96,9 @@ export default function Home() {
 
         <section id="competences" className="mx-auto max-w-6xl px-5 py-20">
           <SectionTitle
-            eyebrow="Savoir-faire"
-            title="Compétences"
-            description="Je préfère présenter les compétences par domaines d’utilisation plutôt que par des pourcentages arbitraires."
+            eyebrow="What I do"
+            title="Skills"
+            description="I present my skills by areas of application rather than using arbitrary percentages."
           />
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -118,9 +122,9 @@ export default function Home() {
         <section id="projets" className="border-y border-zinc-200 bg-zinc-50">
           <div className="mx-auto max-w-6xl px-5 py-20">
             <SectionTitle
-              eyebrow="Réalisations"
-              title="Projets"
-              description="Chaque projet possède désormais sa propre page afin de détailler le contexte, le travail réalisé et les technologies utilisées."
+              eyebrow="Selected work"
+              title="Projects"
+              description="Each project has its own page with more detail about the context, work, and technologies involved."
             />
 
             <div className="grid gap-5 md:grid-cols-2">
@@ -130,6 +134,16 @@ export default function Home() {
                   key={project.slug}
                   className="group flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-950/5 hover:shadow-xl"
                 >
+                  {project.heroImage && (
+                    <img
+                      src={project.heroImage}
+                      alt={project.heroAlt || project.name}
+                      loading="lazy"
+                      className="mb-5 aspect-video w-full rounded-xl border border-zinc-200 object-cover"
+                    />
+
+
+                  )}
                   <p className="text-sm font-semibold text-zinc-500">{project.date}</p>
                   <h3 className="mt-2 text-2xl font-bold tracking-tight text-zinc-950">
                     {project.name}
@@ -144,7 +158,7 @@ export default function Home() {
                   </div>
 
                   <span className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-zinc-950">
-                    Voir le projet
+                    View project
                     <FiArrowUpRight className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
                 </Link>
@@ -157,11 +171,11 @@ export default function Home() {
           <div className="rounded-3xl bg-zinc-950 px-6 py-12 text-white sm:px-10">
             <p className="text-sm font-semibold text-zinc-400">Contact</p>
             <h2 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
-              Un projet, une question ou une opportunité ?
+              Have a project, a question, or an opportunity?
             </h2>
             <p className="mt-4 max-w-2xl leading-7 text-zinc-300">
-              Le moyen le plus simple de me contacter est par e-mail. Mon GitHub
-              permet également de consulter mes dépôts publics.
+              The best way to reach me is by email. You can also explore my
+              public repositories on GitHub.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">

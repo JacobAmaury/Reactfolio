@@ -2,10 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 import { profile } from "../data/portfolio";
 
 const navItems = [
-  ["À propos", "about"],
-  ["Formation", "formation"],
-  ["Compétences", "competences"],
-  ["Projets", "projets"],
+  ["About", "about"],
+  ["Education", "formation"],
+  ["Skills", "competences"],
+  ["Projects", "projets"],
   ["Contact", "contact"],
 ];
 
@@ -41,7 +41,7 @@ export default function Navbar() {
           href={`mailto:${profile.email}`}
           className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-800 transition hover:border-zinc-950 hover:bg-zinc-950 hover:text-white"
         >
-          Me contacter
+          Contact me
         </a>
       </div>
     </header>

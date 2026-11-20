@@ -2,10 +2,10 @@ import exampleImage from "../../../images/exemple.png";
 
 const serveurPersonnel = {
   slug: "serveur-personnel",
-  name: "Serveur personnel auto-hébergé",
+  name: "Self-Hosted Personal Server",
   shortDescription:
-    "Mise en place et administration d’un serveur Linux pour héberger des services et des sites web personnels.",
-  date: "2024 – aujourd’hui",
+    "Set up and administer a Linux server to host personal services and websites.",
+  date: "2024 – Present",
   tags: ["Debian", "Docker", "Traefik", "Nginx", "SSH"],
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae justo sed erat consequat tincidunt.",
@@ -14,18 +14,18 @@ const serveurPersonnel = {
   githubRepositoryURL: "",
   externalURL: "",
   context:
-    "Projet personnel visant à disposer d’une infrastructure auto-hébergée pour différents services et expérimentations.",
+    "Personal project to create a self-hosted infrastructure for various services and experiments.",
   objective:
-    "Mettre en place une infrastructure simple, maintenable et sécurisée pour héberger plusieurs applications derrière un reverse proxy.",
+    "Build a simple, maintainable, and secure infrastructure for hosting multiple applications behind a reverse proxy.",
   work: [
-    "Administration d’un serveur Linux.",
-    "Déploiement d’applications avec Docker et Docker Compose.",
-    "Mise en place de Traefik comme reverse proxy.",
-    "Configuration du HTTPS et des noms de domaine.",
-    "Administration à distance via SSH.",
+    "Administered a Linux server.",
+    "Deployed applications with Docker and Docker Compose.",
+    "Configured Traefik as a reverse proxy.",
+    "Set up HTTPS and domain names.",
+    "Managed the server remotely over SSH.",
   ],
   results:
-    "Le serveur héberge notamment des sites web et différents services personnels. Ce portfolio est lui-même déployé sur cette infrastructure.",
+    "The server hosts websites and various personal services. This portfolio is deployed on the same infrastructure.",
 };
 
 export default serveurPersonnel;

@@ -2,28 +2,28 @@ import exampleImage from "../../../images/exemple.png";
 
 const instrumentsMidi = {
   slug: "instruments-midi",
-  name: "Instruments MIDI avec Arduino",
+  name: "Arduino MIDI Instruments",
   shortDescription:
-    "Conception de contrôleurs MIDI physiques permettant de piloter des logiciels de production musicale.",
+    "Designed physical MIDI controllers for operating music production software.",
   date: "2024",
-  tags: ["Arduino", "C/C++", "MIDI", "Électronique"],
+  tags: ["Arduino", "C/C++", "MIDI", "Electronics"],
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae justo sed erat consequat tincidunt.",
   images: [exampleImage],
   youtubeURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
   githubRepositoryURL: "",
   externalURL: "",
-  context: "Projet personnel mêlant musique, électronique et programmation embarquée.",
+  context: "Personal project combining music, electronics, and embedded programming.",
   objective:
-    "Créer des interfaces physiques personnalisées capables de contrôler des logiciels de production musicale comme Ableton Live.",
+    "Create custom physical interfaces for controlling music production software such as Ableton Live.",
   work: [
-    "Conception de l’interface matérielle.",
-    "Programmation du microcontrôleur.",
-    "Gestion des entrées physiques et génération de messages MIDI.",
-    "Tests avec un logiciel de production musicale.",
+    "Designed the hardware interface.",
+    "Programmed the microcontroller.",
+    "Handled physical inputs and generated MIDI messages.",
+    "Tested the controller with music production software.",
   ],
   results:
-    "Le projet a permis de réaliser des contrôleurs adaptés à mes besoins et d’approfondir ma pratique des microcontrôleurs et de l’électronique.",
+    "The project resulted in custom controllers tailored to my needs and deepened my experience with microcontrollers and electronics.",
 };
 
 export default instrumentsMidi;

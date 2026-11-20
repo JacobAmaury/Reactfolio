@@ -2,11 +2,11 @@ import exampleImage from "../../../images/exemple.png";
 
 const stageLip6 = {
   slug: "stage-lip6",
-  name: "Stage LIP6 — Analyse de textures en VHDL",
+  name: "LIP6 Internship — Texture Analysis in VHDL",
   shortDescription:
-    "Implémentation en VHDL d’algorithmes d’analyse de textures initialement développés en C.",
-  date: "Juin – août 2024",
-  tags: ["C", "VHDL", "Traitement d’image", "FPGA"],
+    "VHDL implementation of texture analysis algorithms originally developed in C.",
+  date: "June – August 2024",
+  tags: ["C", "VHDL", "Image Processing", "FPGA"],
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae justo sed erat consequat tincidunt.",
   images: [exampleImage],
@@ -14,17 +14,17 @@ const stageLip6 = {
   githubRepositoryURL: "",
   externalURL: "",
   context:
-    "Stage de développement réalisé au LIP6 dans le cadre d’un projet de recherche lié à l’analyse d’images.",
+    "Development internship at LIP6 as part of a research project on image analysis.",
   objective:
-    "Transposer vers une implémentation matérielle des algorithmes d’analyse de textures utilisant des matrices de co-occurrence.",
+    "Port texture analysis algorithms based on co-occurrence matrices to a hardware implementation.",
   work: [
-    "Étude de l’algorithme de référence développé en C.",
-    "Implémentation des traitements en VHDL.",
-    "Adaptation des calculs aux contraintes d’une architecture matérielle.",
-    "Validation du comportement de l’implémentation.",
+    "Studied the reference algorithm developed in C.",
+    "Implemented the processing algorithms in VHDL.",
+    "Adapted the computations to the constraints of a hardware architecture.",
+    "Validated the implementation's behavior.",
   ],
   results:
-    "Cette expérience m’a permis de travailler à l’interface entre traitement d’image, développement bas niveau et architecture matérielle.",
+    "This experience allowed me to work at the intersection of image processing, low-level development, and hardware architecture.",
 };
 
 export default stageLip6;

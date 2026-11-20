@@ -2,8 +2,8 @@ import exampleImage from "../../../images/exemple.png";
 
 const iaEchecs = {
   slug: "ia-echecs",
-  name: "IA pour jouer aux échecs",
-  shortDescription: "Développement en Python d’une première IA appliquée au jeu d’échecs.",
+  name: "Chess-Playing AI",
+  shortDescription: "Developed a first chess-playing AI in Python.",
   date: "2023",
   tags: ["Python", "TensorFlow", "IA"],
   description:
@@ -13,16 +13,16 @@ const iaEchecs = {
   githubRepositoryURL: "",
   externalURL: "",
   context:
-    "Projet personnel réalisé pour expérimenter l’apprentissage automatique sur un problème de décision.",
+    "Personal project exploring machine learning for a decision-making problem.",
   objective:
-    "Construire une première application d’intelligence artificielle capable d’interagir avec un environnement de jeu d’échecs.",
+    "Build a first AI application capable of interacting with a chess game environment.",
   work: [
-    "Développement du projet en Python.",
-    "Utilisation de TensorFlow.",
-    "Expérimentation autour de la représentation d’un état de jeu et de la prise de décision.",
+    "Developed the project in Python.",
+    "Used TensorFlow.",
+    "Experimented with representing game states and making decisions.",
   ],
   results:
-    "Ce projet a constitué une première mise en pratique de l’intelligence artificielle avant mon orientation vers les systèmes intelligents.",
+    "This project was my first practical experience with AI, before I specialized in intelligent systems.",
 };
 
 export default iaEchecs;

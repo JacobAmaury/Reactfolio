@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 540" role="img" aria-labelledby="t d">
+<title id="t">Chess AI prediction workflow</title>
+<desc id="d">A chessboard position flows into a multilayer perceptron that suggests piece and destination, followed by a filter rejecting illegal moves.</desc>
+<rect width="1020" height="540" rx="26" fill="#f8fafc"/>
+<text x="510" y="52" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="28" fill="#0f172a">Chess AI · 2023 experiment</text>
+<rect x="65" y="105" width="45" height="45" fill="#f0d9b5"/>
+<text x="87.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♜</text>
+<rect x="110" y="105" width="45" height="45" fill="#b58863"/>
+<text x="132.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♞</text>
+<rect x="155" y="105" width="45" height="45" fill="#f0d9b5"/>
+<text x="177.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♝</text>
+<rect x="200" y="105" width="45" height="45" fill="#b58863"/>
+<text x="222.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♛</text>
+<rect x="245" y="105" width="45" height="45" fill="#f0d9b5"/>
+<text x="267.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♚</text>
+<rect x="290" y="105" width="45" height="45" fill="#b58863"/>
+<text x="312.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♝</text>
+<rect x="335" y="105" width="45" height="45" fill="#f0d9b5"/>
+<text x="357.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♞</text>
+<rect x="380" y="105" width="45" height="45" fill="#b58863"/>
+<text x="402.5" y="139" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♜</text>
+<rect x="65" y="150" width="45" height="45" fill="#b58863"/>
+<text x="87.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="110" y="150" width="45" height="45" fill="#f0d9b5"/>
+<text x="132.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="155" y="150" width="45" height="45" fill="#b58863"/>
+<text x="177.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="200" y="150" width="45" height="45" fill="#f0d9b5"/>
+<text x="222.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="245" y="150" width="45" height="45" fill="#b58863"/>
+<text x="267.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="290" y="150" width="45" height="45" fill="#f0d9b5"/>
+<text x="312.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="335" y="150" width="45" height="45" fill="#b58863"/>
+<text x="357.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="380" y="150" width="45" height="45" fill="#f0d9b5"/>
+<text x="402.5" y="184" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#18181b" stroke="#d7d2c8" stroke-width=".45">♟</text>
+<rect x="65" y="195" width="45" height="45" fill="#f0d9b5"/>
+<rect x="110" y="195" width="45" height="45" fill="#b58863"/>
+<rect x="155" y="195" width="45" height="45" fill="#f0d9b5"/>
+<rect x="200" y="195" width="45" height="45" fill="#b58863"/>
+<rect x="245" y="195" width="45" height="45" fill="#f0d9b5"/>
+<rect x="290" y="195" width="45" height="45" fill="#b58863"/>
+<rect x="335" y="195" width="45" height="45" fill="#f0d9b5"/>
+<rect x="380" y="195" width="45" height="45" fill="#b58863"/>
+<rect x="65" y="240" width="45" height="45" fill="#b58863"/>
+<rect x="110" y="240" width="45" height="45" fill="#f0d9b5"/>
+<rect x="155" y="240" width="45" height="45" fill="#b58863"/>
+<rect x="200" y="240" width="45" height="45" fill="#f0d9b5"/>
+<rect x="245" y="240" width="45" height="45" fill="#b58863"/>
+<rect x="290" y="240" width="45" height="45" fill="#f0d9b5"/>
+<rect x="335" y="240" width="45" height="45" fill="#b58863"/>
+<rect x="380" y="240" width="45" height="45" fill="#f0d9b5"/>
+<rect x="65" y="285" width="45" height="45" fill="#f0d9b5"/>
+<rect x="110" y="285" width="45" height="45" fill="#b58863"/>
+<rect x="155" y="285" width="45" height="45" fill="#f0d9b5"/>
+<rect x="200" y="285" width="45" height="45" fill="#b58863"/>
+<rect x="245" y="285" width="45" height="45" fill="#f0d9b5"/>
+<rect x="290" y="285" width="45" height="45" fill="#b58863"/>
+<rect x="335" y="285" width="45" height="45" fill="#f0d9b5"/>
+<rect x="380" y="285" width="45" height="45" fill="#b58863"/>
+<rect x="65" y="330" width="45" height="45" fill="#b58863"/>
+<rect x="110" y="330" width="45" height="45" fill="#f0d9b5"/>
+<rect x="155" y="330" width="45" height="45" fill="#b58863"/>
+<rect x="200" y="330" width="45" height="45" fill="#f0d9b5"/>
+<rect x="245" y="330" width="45" height="45" fill="#b58863"/>
+<rect x="290" y="330" width="45" height="45" fill="#f0d9b5"/>
+<rect x="335" y="330" width="45" height="45" fill="#b58863"/>
+<rect x="380" y="330" width="45" height="45" fill="#f0d9b5"/>
+<rect x="65" y="375" width="45" height="45" fill="#f0d9b5"/>
+<text x="87.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="110" y="375" width="45" height="45" fill="#b58863"/>
+<text x="132.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="155" y="375" width="45" height="45" fill="#f0d9b5"/>
+<text x="177.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="200" y="375" width="45" height="45" fill="#b58863"/>
+<text x="222.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="245" y="375" width="45" height="45" fill="#f0d9b5"/>
+<text x="267.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="290" y="375" width="45" height="45" fill="#b58863"/>
+<text x="312.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="335" y="375" width="45" height="45" fill="#f0d9b5"/>
+<text x="357.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="380" y="375" width="45" height="45" fill="#b58863"/>
+<text x="402.5" y="409" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♙</text>
+<rect x="65" y="420" width="45" height="45" fill="#b58863"/>
+<text x="87.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♖</text>
+<rect x="110" y="420" width="45" height="45" fill="#f0d9b5"/>
+<text x="132.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♘</text>
+<rect x="155" y="420" width="45" height="45" fill="#b58863"/>
+<text x="177.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♗</text>
+<rect x="200" y="420" width="45" height="45" fill="#f0d9b5"/>
+<text x="222.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♕</text>
+<rect x="245" y="420" width="45" height="45" fill="#b58863"/>
+<text x="267.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♔</text>
+<rect x="290" y="420" width="45" height="45" fill="#f0d9b5"/>
+<text x="312.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♗</text>
+<rect x="335" y="420" width="45" height="45" fill="#b58863"/>
+<text x="357.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♘</text>
+<rect x="380" y="420" width="45" height="45" fill="#f0d9b5"/>
+<text x="402.5" y="454" font-family="DejaVu Sans, Segoe UI Symbol, sans-serif" font-size="34" text-anchor="middle" fill="#ffffff" stroke="#2d2d2d" stroke-width=".45">♖</text>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<text x="245" y="491" fill="#475569" font-size="18">Board position</text>
+<rect x="525" y="147" width="185" height="138" rx="20" fill="#0f172a"/>
+<text x="617" y="199" fill="#ffffff" font-size="27" font-weight="bold">MLP</text>
+<text x="617" y="228" fill="#cbd5e1" font-size="17">TensorFlow</text>
+<text x="617" y="252" fill="#cbd5e1" font-size="16">Move ranking</text>
+<rect x="775" y="147" width="202" height="138" rx="20" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+<text x="876" y="190" fill="#1e40af" font-size="22" font-weight="bold">Legality check</text>
+<text x="876" y="221" fill="#1d4ed8" font-size="16">Try next prediction</text>
+<text x="876" y="245" fill="#1d4ed8" font-size="16">if move is illegal</text>
+</g><g stroke="#64748b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M433 215 H512 m-12 -11 12 11 -12 11"/>
+<path d="M716 215 H765 m-12 -11 12 11 -12 11"/>
+</g><text x="730" y="470" font-family="Arial,sans-serif" font-size="19" text-anchor="middle" fill="#475569">Compared against classical Minimax: 0 wins</text>
+<text x="510" y="514" font-family="Arial,sans-serif" font-size="14" text-anchor="middle" fill="#64748b">Conceptual reconstruction, not a screenshot of the original program</text>
+</svg>

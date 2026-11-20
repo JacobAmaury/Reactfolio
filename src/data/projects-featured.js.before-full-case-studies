@@ -1,0 +1,221 @@
+/**
+ * Portfolio case studies: CoVAPSy and PX4.
+ * Paths point to media in /public/projects/.
+ * The PX4 source code is not public; intentionally no GitHub link is provided.
+ */
+export const featuredProjects = [
+  {
+    slug: "covapsy",
+    name: "CoVAPSy — Autonomous Racing Car",
+    date: "2026 · Robotics team project",
+    category: "Autonomous robotics",
+    shortDescription:
+      "LiDAR-based autonomous navigation on a 1/10-scale racing car, with ROS 2, SLAM Toolbox and Nav2. Demonstrated at up to 2.5 m/s.",
+    tagline: "From embedded electronics to real-world autonomous navigation.",
+    description:
+      "CoVAPSy is a student robotics platform built around a 1/10-scale car. The team develops the complete stack, from electronics and low-level actuation to mapping, localisation and autonomous track navigation.",
+    context:
+      "The objective is to build and continuously improve a small autonomous vehicle able to navigate indoor circuits and react to unexpected obstacles. The platform is developed as a team project at Sorbonne Université.",
+    objective:
+      "Improve the reliability of the embedded platform and make the vehicle navigate a mapped track at increasingly high speed, while responding to obstacles.",
+    work: [
+      "Improved the onboard electronics and contributed to the reliability of the embedded platform.",
+      "Integrated SLAM Toolbox to build occupancy-grid maps using LiDAR scans.",
+      "Contributed to Nav2 integration and tuned navigation parameters for the car's Ackermann steering and real track conditions.",
+      "Participated in autonomous-track tests, localisation troubleshooting and obstacle-avoidance demonstrations.",
+      "Started exploratory Webots simulation work for future reinforcement-learning experiments."
+    ],
+    results:
+      "In a recorded team demonstration, the car completed three autonomous laps, then navigated around obstacles placed in its path. A speed of 2.5 m/s was reached during the demonstration. Webots and reinforcement learning are exploratory rather than validated sim-to-real results.",
+    tags: ["ROS 2 Jazzy", "Nav2", "SLAM Toolbox", "LiDAR", "AMCL", "Raspberry Pi 5", "STM32", "Webots"],
+    heroImage: "/projects/covapsy/car.jpg",
+    heroAlt: "CoVAPSy autonomous racing car and its onboard electronics",
+    images: ["/projects/covapsy/car.jpg", "/projects/covapsy/rviz-map.png"],
+    youtubeURL: "https://www.youtube.com/embed/_qtebIZEp5c",
+    videoTitle: "CoVAPSy — autonomous laps and obstacle avoidance",
+    videoDescription:
+      "Three autonomous laps, followed by an obstacle-avoidance test on the real track.",
+    externalURL: "https://jacobamaury.github.io/site_doc_CoVAPSy_SU/",
+    externalLabel: "Technical documentation",
+    links: [
+      { label: "Technical documentation", url: "https://jacobamaury.github.io/site_doc_CoVAPSy_SU/", kind: "primary" },
+      { label: "Watch the demonstration", url: "https://www.youtube.com/watch?v=_qtebIZEp5c", kind: "secondary" }
+    ],
+    facts: [
+      { value: "2.5 m/s", label: "Speed reached in demo" },
+      { value: "3 laps", label: "Autonomous demo" },
+      { value: "1/10", label: "Vehicle scale" }
+    ],
+    role: "Team project · electronics improvements, SLAM integration and Nav2 contributions",
+    overview:
+      "My main contributions were on the electronics, the integration of SLAM Toolbox, and the implementation and tuning of navigation components with the team. This page focuses on what was built and demonstrated on the real vehicle, rather than presenting every subsystem as my individual work.",
+    sections: [
+      {
+        id: "platform",
+        eyebrow: "01 / System",
+        title: "A complete embedded robotics platform",
+        paragraphs: [
+          "The 1/10-scale vehicle combines a Raspberry Pi 5 running Ubuntu 24.04 and ROS 2 Jazzy with an STM32 microcontroller responsible for low-level interfaces. A rotating LiDAR provides the principal measurements for mapping, localisation and obstacle perception. An IMU and onboard odometry supply motion information.",
+          "The architecture separates high-level robotic software from actuator control and electrical power. Improving the electronics was one of my main contributions to making the platform easier to test and operate."
+        ],
+        bullets: [
+          "ROS 2 nodes handle sensor processing, localisation, navigation and motion commands.",
+          "The vehicle uses Ackermann steering, requiring navigation parameters adapted to its turning constraints.",
+          "LiDAR data is central to the localisation and obstacle-handling pipeline."
+        ]
+      },
+      {
+        id: "slam",
+        eyebrow: "02 / Mapping",
+        title: "Building maps with SLAM Toolbox",
+        paragraphs: [
+          "I integrated SLAM Toolbox into the workflow for mapping an indoor racing track. The car is driven manually around the circuit while LiDAR scans are used to construct an occupancy-grid map. The resulting map can then be cleaned and loaded by the navigation stack.",
+          "For autonomous operation, AMCL estimates the vehicle's pose within the previously generated map. RViz is used to inspect the map, the vehicle pose and the route."
+        ],
+        media: {
+          src: "/projects/covapsy/rviz-map.png",
+          alt: "RViz occupancy-grid map of the CoVAPSy circuit with a red trajectory",
+          caption: "RViz: mapped track, vehicle localisation and racing path."
+        }
+      },
+      {
+        id: "nav2",
+        eyebrow: "03 / Navigation",
+        title: "Nav2 integration and real-world tuning",
+        paragraphs: [
+          "I contributed to integrating Nav2 and iteratively adjusting its parameters with the team. Our navigation system combines a map server and AMCL localisation with path planning, trajectory tracking and collision-management components.",
+          "For repeated racing laps, the application loads a set of waypoints, initialises the vehicle's pose and submits successive navigation goals. Real tests are essential: the controller must balance path-following accuracy, cornering behaviour, speed and robustness to localisation errors."
+        ],
+        bullets: [
+          "Map-based localisation using AMCL and LiDAR scans.",
+          "Trajectory tracking using Nav2 controllers, including Regulated Pure Pursuit.",
+          "Waypoint-based lap execution with recovery handling.",
+          "Parameter tuning on the real vehicle, not only in simulation."
+        ]
+      },
+      {
+        id: "results",
+        eyebrow: "04 / Demonstration",
+        title: "Autonomous laps and obstacle avoidance",
+        paragraphs: [
+          "In the demonstration video, the car completes three laps of the circuit autonomously. Obstacles are then placed on the track and the car navigates around them. The team reached 2.5 m/s during the demonstration.",
+          "These results reflect a complete hardware-and-software system running on the real car. They are not simulated benchmark scores."
+        ]
+      },
+      {
+        id: "future",
+        eyebrow: "05 / In progress",
+        title: "Exploring Webots and reinforcement learning",
+        paragraphs: [
+          "We have started experimenting with Webots as a simulation environment for the vehicle. One longer-term direction is to investigate reinforcement learning and transfer promising behaviours from simulation to the physical car.",
+          "This work is at an early stage. It is not presented here as a completed or experimentally validated sim-to-real pipeline."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "px4",
+    name: "PX4 — Research Drone Flight Control",
+    date: "May–July 2026 · M1 research internship",
+    category: "Flight control & research",
+    shortDescription:
+      "Migration of a laboratory drone control stack to PX4, a ROS 2 flight mode controlled by a Myo armband, and an experimental custom controller.",
+    tagline: "Migrating a research flight-control stack without losing experimental flexibility.",
+    description:
+      "During my M1 internship at Heudiasyc (UTC/CNRS), I investigated replacing the laboratory's FL-AIR control architecture with PX4 and developed initial tools for research use.",
+    context:
+      "The laboratory's FL-AIR software supports research on drone control but is difficult to maintain and integrate with modern robotics tooling. PX4 offers a larger ecosystem, but researchers must still be able to create custom flight modes and control laws.",
+    objective:
+      "Validate an end-to-end PX4/ROS 2 architecture on a real drone, evaluate a resource-constrained platform, and establish a reusable approach to custom control development.",
+    work: [
+      "Selected compatible versions of PX4, ROS 2 Jazzy, Gazebo Harmonic, px4_msgs and Micro XRCE-DDS.",
+      "Created a Python ROS 2 driver for the Myo armband and a C++ external PX4 flight mode.",
+      "Validated Myo-controlled flight in Gazebo and subsequently on a real quadrotor.",
+      "Investigated PX4 on Crazyflie, corrected motor mapping and fitted a firmware build with uXRCE-DDS into limited memory.",
+      "Analysed the PX4 cascaded position, attitude and rate control loops and developed an experimental out-of-tree controller.",
+      "Prepared a controller template, technical documentation and a GitLab continuous-integration workflow."
+    ],
+    results:
+      "The Myo-based control chain was demonstrated on a real quadrotor. The experimental out-of-tree controller successfully integrated force-to-attitude setpoint generation with PX4, but was not completed or validated in real flight. The Crazyflie study identified hardware and communication limits preventing the desired ROS 2 workflow.",
+    tags: ["PX4", "ROS 2 Jazzy", "C++", "Python", "Gazebo", "Micro XRCE-DDS", "Pixhawk 6", "Jetson Nano", "Quaternions"],
+    heroImage: "/projects/px4/drone.jpg",
+    heroAlt: "Research quadrotor used during the Heudiasyc internship",
+    images: ["/projects/px4/drone.jpg", "/projects/px4/myo-architecture.png"],
+    externalURL: "https://www.youtube.com/shorts/ZvkDZI-fqaA",
+    externalLabel: "Simulation clip",
+    links: [
+      { label: "Simulation video", url: "https://www.youtube.com/shorts/ZvkDZI-fqaA", kind: "secondary" }
+    ],
+    facts: [
+      { value: "Real flight", label: "Myo demo validated" },
+      { value: "100 Hz", label: "Custom module loop" },
+      { value: "ROS 2", label: "PX4 integration" }
+    ],
+    role: "Individual M1 internship · Heudiasyc research laboratory (UTC/CNRS)",
+    overview:
+      "The internship covered four complementary tasks: a reliable PX4/ROS 2 development environment, a working motion-controlled flight demonstration, a feasibility study on Crazyflie, and the first reusable building blocks for custom flight-control algorithms. The source code belongs to the host laboratory and is not publicly available.",
+    sections: [
+      {
+        id: "architecture",
+        eyebrow: "01 / Integration",
+        title: "Connecting PX4, ROS 2 and Gazebo",
+        paragraphs: [
+          "The first challenge was version compatibility across PX4 firmware, px4_msgs, the PX4 ROS 2 Interface Library, Micro XRCE-DDS and ROS 2 Jazzy. I assembled and tested a compatible development stack with Gazebo Harmonic for simulation.",
+          "PX4 modules exchange uORB messages internally; the Micro XRCE-DDS bridge exposes the relevant data to ROS 2 running on a companion computer. This allows custom ROS 2 applications to interact with the flight stack while PX4 retains responsibility for vehicle control and safety."
+        ],
+        bullets: [
+          "PX4 v1.18 development revision and ROS 2 Jazzy.",
+          "Gazebo Harmonic for software-in-the-loop simulation.",
+          "Micro XRCE-DDS and px4_msgs for PX4 ↔ ROS 2 communication."
+        ]
+      },
+      {
+        id: "myo",
+        eyebrow: "02 / Real-world demonstrator",
+        title: "Controlling a quadrotor using arm motion",
+        paragraphs: [
+          "I developed a Python ROS 2 driver to publish the Myo armband's motion and gesture information, then implemented a C++ external flight mode using the PX4 ROS 2 Interface Library. Arm pitch and roll are transformed into vehicle-relative motion commands and then rotated into the navigation frame using the drone's current yaw.",
+          "The complete chain was validated first in Gazebo and then on a physical quadrotor with a Pixhawk 6 and a Jetson Nano running ROS 2. The indoor setup used OptiTrack for localisation, and a second pilot could take control with a radio transmitter. The resulting flight mode was demonstrated during the laboratory's TechDays."
+        ],
+        media: {
+          src: "/projects/px4/myo-architecture.png",
+          alt: "Architecture connecting Myo armband, ROS 2, XRCE-DDS, PX4 and the quadrotor",
+          caption: "System architecture extracted from my M1 internship report."
+        }
+      },
+      {
+        id: "crazyflie",
+        eyebrow: "03 / Embedded constraints",
+        title: "Investigating PX4 on Crazyflie",
+        paragraphs: [
+          "On the Crazyflie micro-drone, I corrected a motor numbering problem in its PX4 airframe configuration and reduced the firmware footprint to include the uXRCE-DDS client. The small device exposed practical memory and compute constraints.",
+          "The remaining blocker was communication: the Crazyflie radio protocol was not directly compatible with the intended uXRCE-DDS transport. Combined with runtime limitations, this meant the platform did not meet the laboratory's requirements."
+        ]
+      },
+      {
+        id: "controller",
+        eyebrow: "04 / Control algorithms",
+        title: "An out-of-tree custom controller",
+        paragraphs: [
+          "I studied PX4's cascaded multicopter controller, from position and velocity setpoints to desired acceleration, attitude, angular rates and torque. This led to an out-of-tree module that can be compiled into PX4 without maintaining a direct fork of its main source tree.",
+          "The module reads vehicle state and trajectory setpoints, computes a virtual force, derives a desired attitude quaternion and publishes vehicle_attitude_setpoint. PX4's standard inner attitude and angular-rate controllers remain active. The module runs at approximately 100 Hz and includes a takeover parameter to control when experimental setpoints may be published.",
+          "This was a proof of integration, not a completed replacement for the entire flight-control cascade: the SFC and ESC variants remained experimental, SSC was unfinished and the full controller was not validated on a real drone."
+        ],
+        media: {
+          src: "/projects/px4/px4-controller-diagram.png",
+          alt: "PX4 cascaded multicopter controller architecture diagram",
+          caption: "PX4 cascaded controller architecture, as documented in my internship report."
+        }
+      },
+      {
+        id: "handover",
+        eyebrow: "05 / Deliverables",
+        title: "Reusable foundations for the research team",
+        paragraphs: [
+          "Beyond the demonstrations, I prepared a reusable controller template, technical documentation and a GitLab CI pipeline to automate compilation checks. These deliverables were intended to make future control-law experiments easier to integrate and maintain.",
+          "The work demonstrated a viable path from FL-AIR to PX4 while clearly identifying the areas that still require development and experimental validation. The laboratory's code is not published in this portfolio."
+        ]
+      }
+    ]
+  }
+];
